@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de Mí</title>
+    <link rel="stylesheet" href="LABO.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <h1 class="mt-4">Acerca de Mí</h1>
+    <div class="grid-container">
+        <div class="grid-item" onclick="mostrarMensaje('Admiro a mi madre porque es fuerte y siempre')">Persona a quien admiro</div>
+        <div class="grid-item" ondblclick="cambiarColor(this)">Meta que quiero lograr a futuro</div>
+        <div class="grid-item" onmouseover="mostrarTooltip(this, 'Me encanta el rock clásico')" onmouseout="ocultarTooltip()">Género musical favorito</div>
+        <div class="grid-item" onmousedown="agrandarTexto(this)" onmouseup="restaurarTexto(this)">Algo sin lo que no podría vivir</div>
+        <div class="grid-item" onmouseenter="rotarElemento(this)" onmouseleave="restaurarRotacion(this)">Un talento que poseo</div>
+        <div class="grid-item" oncontextmenu="cambiarTexto(event, this)">Mi animal favorito</div>
+    </div>
+
+    <script src="LABO.js"></script>
+</body>
+</html>
