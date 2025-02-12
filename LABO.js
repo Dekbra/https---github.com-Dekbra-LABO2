@@ -3,9 +3,17 @@ function mostrarMensaje(mensaje) {
 }
 
 function cambiarColor(elemento) {
-    elemento.style.backgroundColor = '#b3e0ff';
-    elemento.innertext("¡Ser exitoso!", elemento);
+    if (elemento.style.backgroundColor === 'rgb(179, 224, 255)') {
+        // Si ya está azul, vuelve al estado original
+        elemento.style.backgroundColor = 'white';
+        elemento.innerText = "Meta que quiero lograr a futuro";
+    } else {
+        // Si está en su estado original, cambia de color y texto nuevamente jiji si me salio bien
+        elemento.style.backgroundColor = '#b3e0ff';
+        elemento.innerText = "¡Ser exitoso!";
+    }
 }
+
 
 function mostrarTooltip(elemento, texto) {
     let tooltip = document.createElement("div");
@@ -49,10 +57,10 @@ function restaurarRotacion(elemento) {
     elemento.innerText = "Un talento que poseo";
 }
 
-function cambiarTexto(event, elemento) {
-    event.preventDefault();
-    // Asegúrate de que el texto no se sobrescriba si ya se cambió en otras funciones
-    if (elemento.innerText !== "¡El color ha cambiado!") {
-        elemento.innerText = "Amo los lobos";
+function cambiarTexto(elemento) {
+    if (elemento.innerText === "Mi animal favorito") {
+        elemento.innerText = "Perros";
+    } else {
+        elemento.innerText = "Mi animal favorito";
     }
 }
